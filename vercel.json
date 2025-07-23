@@ -8,10 +8,6 @@
       "use": "@vercel/static-build"
     }
   ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
-  ],
   "outputDirectory": "dist/test_custom_webpack",
   "buildCommand": "npm run build"
 }
