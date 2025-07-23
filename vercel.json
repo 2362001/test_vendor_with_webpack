@@ -4,11 +4,13 @@
   ],
   "builds": [
     {
-      "src": "angular.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist/test_custom_webpack"
-      }
+      "src": "package.json",
+      "use": "@vercel/static-build"
     }
-  ]
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
+  ],
+  "outputDirectory": "dist/test_custom_webpack"
 }
