@@ -1,13 +1,16 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
   "builds": [
     {
       "src": "package.json",
       "use": "@vercel/static-build"
     }
   ],
+  "buildCommand": "npm run build",
   "outputDirectory": "dist/test_custom_webpack",
-  "buildCommand": "npm run build"
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
