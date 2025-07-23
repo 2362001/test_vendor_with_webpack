@@ -5,13 +5,13 @@ module.exports = (config) => {
     optimization: {
       splitChunks: {
         chunks: "all",
-        maxSize: 50 * 1024,
+        maxSize: 1000 * 1024,
         cacheGroups: {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
             name: "vendor-js",
             chunks: "all",
-            enforce: true,
+            // enforce: true,
             // priority: 10,
           },
         },
